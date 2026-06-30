@@ -1,0 +1,52 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int num=1234;
+		int balance=10000;
+		if(n==num){
+		    while(true){
+		    int first=sc.nextInt();
+           if(first==1){
+               System.out.println(balance);
+           }
+		        else if(first==2){
+		            int total= sc.nextInt();
+                    if (total % 100 != 0)
+                    {
+                        System.out.println("Please enter valid amount");
+                    }
+                    else if (total > balance)
+                    {
+                        System.out.println("Insufficient Balance");
+                    }
+                    else
+                    {
+                        balance = balance - total;
+                        System.out.println("Withdraw Successful");
+                    }
+
+		        }
+		else if(first==3){
+		    int deposit=sc.nextInt();
+	     if (deposit % 100 == 0 && deposit < 40000){
+		    balance=balance+deposit;
+		    System.out.println("Deposit Successful");
+		} else
+                    {
+                        System.out.println("Please enter valid amount");
+                    }}
+		else if(first==4){
+		   System.out.println("thank you");
+		   break;
+		}
+		else{
+		    System.out.println("Invalid choice");
+		}
+		}}else {
+		    System.out.println("Invalid Password");
+		}
+		}
+	}
