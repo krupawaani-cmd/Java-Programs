@@ -1,0 +1,35 @@
+Input
+The input consists of an integer billAmount, representing the
+customer’s total bill amount.
+Output
+Print an integer representing the discount for the given total bill
+amount
+Constraints
+0 <billAmount ≤ 109
+Example
+Input:
+2514795
+Output
+27
+Explanation:
+Odddigits in the given number 2514795 are 5, 1, 7, 9, 5. The sum of
+these odd digits is 27.
+So, the output is 27
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		 int n=sc.nextInt();
+		 int sum=0;
+		 while(n>0){
+		     int num=n%10;
+		     if(num%2!=0){
+		         sum=sum+num;
+		     }
+		     n=n/10;
+		 }
+		 System.out.println(sum);
+	}
+}
