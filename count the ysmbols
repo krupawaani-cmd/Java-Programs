@@ -1,0 +1,39 @@
+4. Acompanyhaslaunched a new text editor that allows users to enter
+English letters, numbers and whitespaces only. If a user attempts to
+enter any other type of character, it is counted as a miss.
+Given a string of text, write an algorithm to help the developer detect
+the number of misses by a given user in the given input.
+Input
+The input consists of a string textlnput, representing the text that is
+entered in the text editor by the user.
+Output
+Printanintegerrepresentingthenumberofmissesbyagivenuserin
+thegiveninput.
+Example
+Input:
+aaa234bc@sad$hsagd^
+Output:
+3
+Explanation:
+Thecharactersthatarecountedasmissesbytheeditorare[‘@’,’$’,’^’]
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+	     String s=sc.nextLine();
+	     int count=0;
+	     for(int i=0;i<s.length();i++){
+	         if(s.charAt(i)=='@'){
+	             count++;
+	         }if(s.charAt(i)=='$'){
+	             count++;
+	         }
+	         if(s.charAt(i)=='^'){
+	             count++;
+	         }
+	     }
+        System.out.println(count);
+	}
+}
