@@ -1,0 +1,48 @@
+In a science research lab, the combination of two nuclear substances
+produces an initial energy A. This energy A changes at a consistent rate
+R every second. The energy gets multiplied by a constant value R every
+second. The scientist wishes to calculate the energy produced at every
+second if the reaction is allowed to happen for N seconds.
+Write an algorithm to find the energy produced at every second if the
+reaction is allowed to happen for N seconds.
+Input
+The input consists of three space-separated integers–intialEnergy, rate
+and time. representing the initial energy produced on combining the
+nuclear substances (A), the consistent rate of change (R), and the
+seconds for which the reaction is allowed to happen (N), respectively.
+Output
+Print N space-separated integers representing the energy produced at
+every second if the reaction is allowed to happen for N seconds.
+Constraints-106≤intialEnergy,rate ≤ 106
+0 ≤time ≤ 100
+Example
+Input
+5 33
+Output:
+5 15 45
+Explanation:
+For N =1, an initial energy of 5 is generated
+For N=2, a consistent rate of 3 is multiplied to it, so it becomes 15
+For N=3, again 3 is multiplied to the previous energy value, so it
+becomes 45.
+So the out is 5, 15, 45
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+       int a=sc.nextInt();
+       int r=sc.nextInt();
+       int n=sc.nextInt();
+       for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            a = a * r;
+        }
+
+	   }
+   
+	       
+	   }
+	
