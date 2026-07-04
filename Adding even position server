@@ -1,0 +1,52 @@
+Write an algorithm to find the total number of units of memory
+allocated/deallocated by the server 1 after processing all the requests.
+Input
+The first line of the input consists of an integer numOfReq, representing
+the number of requests(N).
+The second line consists of N space-separated integers-req1,req2,…,reqN
+representing the requests for the allocation/deallocation of the
+respective memory units.
+Output
+Return an integer representing the total number of units of memory
+allocation/deallocated by the server 1 after processing all the requests.
+Constraints
+0<_ numOfReq<_105-106<_reqi<_106
+0<_i<numOfReq
+Example
+Input
+7
+2-3-8-6-7181
+Output
+4
+Explanation
+The requests served by server 1 are [2,8,-7,1]
+So, the total processing time of server 2 is 4.
+TESTCASES:
+TestCase1:
+Input
+5
+14 53 2231
+Expected Return Value
+17
+TestCase2:
+Input:
+6
+54 232568812
+Expected Return Value:
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int sum=0;
+		for(int i=0;i<n;i++){
+		    int x=sc.nextInt();
+		    if(i%2==0){
+		        sum=sum+x;
+		    }
+		}
+		System.out.print(sum);
+	}
+}
