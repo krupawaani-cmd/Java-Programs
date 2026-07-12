@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String s=sc.next();
+
+        int max=0;
+
+        for(int i=0;i<s.length();i++)
+        {
+            String str="";
+
+            for(int j=i;j<s.length();j++)
+            {
+                char ch=s.charAt(j);
+
+                if(str.indexOf(ch)!=-1)
+                {
+                    break;
+                }
+
+                str=str+ch;
+
+                if(str.length()>max)
+                {
+                    max=str.length();
+                }
+            }
+        }
+
+        System.out.println(max);
+    }
+}
